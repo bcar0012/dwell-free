@@ -43,26 +43,26 @@
 </head>
 
 <body>
-
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <p class="modal-text">Start typing in...</p>
-    <p class="modal-text-seconds" id="countdown-sec"></p>
-  </div>
-
-</div>
-
-<div class="button" id="button_delete">
-	    	<div class="button-pie">	    	
-	    	</div>
-	    </div>
-	<div id="mainContentKeyboard">
-	    <div contenteditable="true" id="write"></div>	    
-    	<div id="keyboard"></div>    	
+	<div id="myModal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<p class="modal-text">Start typing in...</p>
+			<p class="modal-text-seconds" id="countdown-sec"></p>
+		</div>
 	</div>
-	
+
+	<div class="button" id="button_delete">
+		<div class="button-pie"></div>
+	</div>
+	<div id="mainContentKeyboard">
+		<div contenteditable="true" id="write"></div>	    
+		<div id="keyboard"></div>    	
+	</div>	
+
+	<div class="button button-space" id="button_Space">
+		<div class="button-pie">	    	
+	    </div>
+	</div>
 	<div id='readyConfirmation' class='hidden'>
 		<form id="Confirm" onSubmit="Levenshtein(pangram, $('#write').clone().children().find('.primary').text());" action="Result.html" method="GET">
 			<input type="hidden" id="accuracy" name="accuracy" value=""/>

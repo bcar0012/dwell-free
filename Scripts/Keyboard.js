@@ -372,6 +372,16 @@
                 localStorage.setItem("#keyboard-top_right", ((coordinate.left+width)-marginLength) + ',' + coordinate.top);
                 localStorage.setItem("#keyboard-bottom_left", coordinate.left + ',' + (coordinate.top+height));
                 localStorage.setItem("#keyboard-bottom_right", (coordinate.left+width) + ',' + (coordinate.top+height));
+
+                //Coordinates of Space key
+                element = $('#button_Space');
+                coordinate = element.offset();
+                width= element.outerWidth();
+                height = element.outerHeight();
+                localStorage.setItem("#button_Space-top_left", coordinate.left + ',' + coordinate.top);
+                localStorage.setItem("#button_Space-top_right", (coordinate.left+width) + ',' + coordinate.top);
+                localStorage.setItem("#button_Space-bottom_left", coordinate.left + ',' + (coordinate.top+height));
+                localStorage.setItem("#button_Space-bottom_right", (coordinate.left+width) + ',' + (coordinate.top+height));
             }
             //--END: Load character coordinates in Local Storage--//
             
@@ -765,6 +775,11 @@
                 if (!((x >= topLeftX) && (x <= topRightX) && (y >= topLeftY) && (y <= bottomLeftY)) && (!((x >= spacetopLeftX) && (x <= spacetopRightX) && (y >= spacetopLeftY) && (y <= spacebottomLeftY))))
                 {
                     return null;
+                }
+
+                if((x >= spacetopLeftX) && (x <= spacetopRightX) && (y >= spacetopLeftY) && (y <= spacebottomLeftY))
+                {
+                    return ' ';
                 }
                 
                 for(var i=0 ; i<keyboard.length;i++)

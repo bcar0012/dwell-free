@@ -11,9 +11,7 @@
         { "value":"I" , "characterValue":"i", "row":"1", "column":"8", "rowspan":"1", "colspan":"1", "class":"button"},
         { "value":"O" , "characterValue":"o", "row":"1", "column":"9", "rowspan":"1", "colspan":"1", "class":"button"},
         { "value":"P" , "characterValue":"p", "row":"1", "column":"10", "rowspan":"1", "colspan":"1", "class":"button"},        
-        { "value":"" , "characterValue":"", "row":"1", "column":"11", "rowspan":"3", "colspan":"3", "class":"button button-space hide"},
-        { "value":"Space" , "characterValue":" ", "row":"1", "column":"14", "rowspan":"3", "colspan":"1", "class":"button button-space button-space-vertical"},
-
+      
         { "value":"A" , "characterValue":"a", "row":"2", "column":"1", "rowspan":"1", "colspan":"1", "class":"button"},
         { "value":"S" , "characterValue":"s", "row":"2", "column":"2", "rowspan":"1", "colspan":"1", "class":"button"},
         { "value":"D" , "characterValue":"d", "row":"2", "column":"3", "rowspan":"1", "colspan":"1", "class":"button"},
@@ -35,7 +33,7 @@
         { "value":"Fullstop" , "characterValue":".", "row":"3", "column":"8", "rowspan":"1", "colspan":"1", "class":"button"},
         { "value":"Question" , "characterValue":"?", "row":"3", "column":"9", "rowspan":"1", "colspan":"1", "class":"button"},
         { "value":"ExclamationMark" , "characterValue":"!", "row":"3", "column":"10", "rowspan":"1", "colspan":"1", "class":"button"}
-        
+
     ],
      
     "dvorak":
@@ -50,9 +48,7 @@
         { "value":"C" , "characterValue":"c", "row":"1", "column":"8", "rowspan":"1", "colspan":"1", "class":"button"},
         { "value":"R" , "characterValue":"r", "row":"1", "column":"9", "rowspan":"1", "colspan":"1", "class":"button"},
         { "value":"L" , "characterValue":"l", "row":"1", "column":"10", "rowspan":"1", "colspan":"1", "class":"button"},        
-        { "value":"" , "characterValue":"", "row":"1", "column":"11", "rowspan":"3", "colspan":"3", "class":"button button-space hide"},
-        { "value":"Space" , "characterValue":" ", "row":"1", "column":"14", "rowspan":"3", "colspan":"1", "class":"button button-space button-space-vertical"},
-
+      
         { "value":"A" , "characterValue":"a", "row":"2", "column":"1", "rowspan":"1", "colspan":"1", "class":"button"},
         { "value":"O" , "characterValue":"o", "row":"2", "column":"2", "rowspan":"1", "colspan":"1", "class":"button"},
         { "value":"E" , "characterValue":"e", "row":"2", "column":"3", "rowspan":"1", "colspan":"1", "class":"button"},
@@ -89,9 +85,7 @@
         { "value":"H" , "characterValue":"h", "row":"1", "column":"8", "rowspan":"1", "colspan":"1", "class":"button"},
         { "value":"I" , "characterValue":"i", "row":"1", "column":"9", "rowspan":"1", "colspan":"1", "class":"button"},
         { "value":"J" , "characterValue":"j", "row":"1", "column":"10", "rowspan":"1", "colspan":"1", "class":"button"},
-        { "value":"" , "characterValue":"", "row":"1", "column":"11", "rowspan":"3", "colspan":"3", "class":"button button-space hide"},
-        { "value":"Space" , "characterValue":" ", "row":"1", "column":"14", "rowspan":"3", "colspan":"1", "class":"button button-space button-space-vertical"},
-
+       
         { "value":"K" , "characterValue":"k", "row":"2", "column":"1", "rowspan":"1", "colspan":"1", "class":"button"},
         { "value":"L" , "characterValue":"l", "row":"2", "column":"2", "rowspan":"1", "colspan":"1", "class":"button"},
         { "value":"M" , "characterValue":"m", "row":"2", "column":"3", "rowspan":"1", "colspan":"1", "class":"button"},
