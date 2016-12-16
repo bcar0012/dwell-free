@@ -7,7 +7,7 @@
         var keyboard, ready=false;
         
         //--START Load keyboard layout--//
-        var loadKeyboard = $.getJSON('../assets/keyboard-layouts.json', function(data)
+        var loadKeyboard = $.getJSON('assets/keyboard-layouts.json', function(data)
         {
             keyboard = data[layout];
         });
@@ -413,7 +413,7 @@
                 
                 if (window.Worker)
                 {
-                    var myWorker = new Worker("Scripts/WebWorker.js");
+                    var myWorker = new Worker("scripts/web-worker.js");
                     var request = window.indexedDB.deleteDatabase('dwellfree');
                     request.onsuccess = function(e)
                     {
@@ -560,7 +560,7 @@
                 
                 if (window.Worker)
                 {
-                    var myWorker = new Worker("Scripts/WebWorker.js");
+                    var myWorker = new Worker("scripts/web-worker.js");
                     var request = window.indexedDB.deleteDatabase('dwellfree');
                     request.onsuccess = function(e)
                     {
