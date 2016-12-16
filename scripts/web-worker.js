@@ -528,7 +528,7 @@ onmessage = function(e)
             {
                 layout = colon[j+1];
                 
-                loadedKeyboard = $.getJSON('assets/keyboard-layouts.json', function(results)
+                loadedKeyboard = $.getJSON('../assets/keyboard-layouts.json', function(results)
                 {
                     keyboard = results[layout];
                 });
