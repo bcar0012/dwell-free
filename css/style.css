@@ -1454,7 +1454,7 @@ td
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: url("../images/keyboard.png") 96% / 15% no-repeat #fff;
+    background: url("/Images/keyboard.png") 96% / 15% no-repeat #fff;
     border: 1px solid #f9f9f9;
     font-family: muli;
     font-size: smaller;
@@ -1470,7 +1470,7 @@ td
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: url("../images/clock.png") 96% / 15% no-repeat #fff;
+  background: url("/Images/clock.png") 96% / 15% no-repeat #fff;
   border: 1px solid #f9f9f9;
   font-family: muli;
   font-size: smaller;
@@ -1561,7 +1561,7 @@ td
 #button_delete
 {
   margin-top: 8.6%;
-  content: url("../images/backspace.png");
+  content: url("/Images/backspace.png");
   -webkit-filter: invert(100%);
   background: rgba(56, 56, 56, 0.12);
   border-color: rgb(203, 203, 203);
