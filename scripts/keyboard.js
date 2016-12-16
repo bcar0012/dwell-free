@@ -413,7 +413,7 @@
                 
                 if (window.Worker)
                 {
-                    var myWorker = new Worker("Scripts/WebWorker.js");
+                    var myWorker = new Worker("scripts/web-worker.js");
                     var request = window.indexedDB.deleteDatabase('dwellfree');
                     request.onsuccess = function(e)
                     {

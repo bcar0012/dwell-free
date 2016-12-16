@@ -1454,7 +1454,7 @@ td
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: url("/Images/keyboard.png") 96% / 15% no-repeat #fff;
+    background: url("../images/keyboard.png") 96% / 15% no-repeat #fff;
     border: 1px solid #f9f9f9;
     font-family: muli;
     font-size: smaller;
@@ -1470,7 +1470,7 @@ td
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: url("/Images/clock.png") 96% / 15% no-repeat #fff;
+  background: url("../images/clock.png") 96% / 15% no-repeat #fff;
   border: 1px solid #f9f9f9;
   font-family: muli;
   font-size: smaller;
