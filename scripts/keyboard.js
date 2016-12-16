@@ -7,7 +7,7 @@
         var keyboard, ready=false;
         
         //--START Load keyboard layout--//
-        var loadKeyboard = $.getJSON('KeyboardLayouts.json', function(data)
+        var loadKeyboard = $.getJSON('../assets/keyboard-layouts.json', function(data)
         {
             keyboard = data[layout];
         });
