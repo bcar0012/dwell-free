@@ -222,6 +222,7 @@
                         {
                             write.html(write.html() + dwellFreeStringBuffer);
                             dwellFreeStringBuffer='';
+                            document.getElementById("Speech").className = document.getElementById("Speech").className.replace('hidden','visible');
                         }
                     },500);
                 }
