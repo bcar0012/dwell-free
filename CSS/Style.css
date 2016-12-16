@@ -87,7 +87,7 @@ body
     text-align: center;
     height: 28px;
     position: fixed;
-    bottom: 0;
+    bottom: 10px;
     float: right;
     right: 10px;
     margin-bottom: 0.5%;
@@ -174,21 +174,6 @@ td {
 {
   background-color: white;
 }
-
-/*.button:hover:after {
-  content: '';
-  background-image: url("/Images/mouse-pointer.png");
-  filter: invert(1);
-  width: 23px;
-  height: 23px;
-  position: absolute;
-  top: 80%;
-  left: 80%;
-  transform: translate(-50%, -50%);
-  background-size: contain;
-  background-repeat: no-repeat;
-  z-index: 3;
-}*/
 
 .button-space
 {
@@ -462,7 +447,7 @@ td
 	text-align: center;
   height: 28px;
   position: fixed;
-  bottom: 0;
+  bottom: 10;
   z-index: 9999;
   margin-bottom: 1%;
 	font-family: muli;
@@ -1585,4 +1570,16 @@ td
 .side-padding
 {
   padding-right:25%;
+}
+
+.preloader-gif
+{
+  width: 25px;
+}
+
+.preloader
+{
+  position: absolute;
+  padding-left: 47%;
+  padding-top: 1.3%;
 }

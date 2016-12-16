@@ -54,14 +54,16 @@
 	<div class="button" id="button_delete">
 		<div class="button-pie"></div>
 	</div>
+	<div class="preloader hidden" id="preloader">
+		<img src="Images/default.gif" class="preloader-gif">
+	</div>
 	<div id="mainContentKeyboard">
 		<div contenteditable="true" id="write"></div>	    
 		<div id="keyboard"></div>    	
 	</div>	
 
-	<div class="button button-space" id="button_Space">
-		<div class="button-pie">	    	
-	    </div>
+	<div class="button-space" id="button_Space">
+		<div class="button-pie"></div>
 	</div>
 	<div id='readyConfirmation' class='hidden'>
 		<form id="Confirm" onSubmit="Levenshtein(pangram, $('#write').clone().children().find('.primary').text());" action="Result.html" method="GET">
@@ -69,7 +71,6 @@
 			<input type="hidden" id="error" name="error" value=""/>
 			<input type="hidden" id="wpm" name="wpm" value=""/>
 			<input type="hidden" id="tot" name="TOT" value=""/>
-			<input type="hidden" id="tcr" name="TCR" value=""/>
 			<input type="hidden" id="layout" name="layout" value=""/>
  			<span id='readyText'>Are you ready?</span>
 			<button type="submit" id="yes" class="btn btn-success">Yes</button>

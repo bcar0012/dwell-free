@@ -47,7 +47,6 @@
                 	        {
                 	            if(rowCreated)
                 	            {
-                	                
                 	                if(keyboard[c].value=='')
                 	                {
                 	                    $('<td rowspan="'+ keyboard[c].rowspan + '" colspan="' + keyboard[c].colspan + '" class="' +  keyboard[c].class +'"></td>').appendTo('#row-' + r);                	                    
@@ -196,6 +195,10 @@
             var updateText = null;
             $('#write').hover(function()
             {
+                if(returnedFromWorker==false)
+                {
+                    document.getElementById("preloader").className = 'preloader visible';
+                }
                 if(ms==0)
                 {
                     var write = $('#write');
@@ -208,6 +211,13 @@
 
                     updateText = setInterval(function()
                     {
+                        if(returnedFromWorker==false)
+                        {
+                            document.getElementById("preloader").className = 'preloader visible';
+                        }else
+                        {
+                            document.getElementById("preloader").className = 'hidden preloader';
+                        }
                         if(dwellFreeStringBuffer != '')
                         {
                             write.html(write.html() + dwellFreeStringBuffer);
@@ -218,6 +228,7 @@
             },
             function(e)
             {
+                document.getElementById("preloader").className = 'hidden preloader';
                 clearInterval(updateText);
             });
 
