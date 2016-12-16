@@ -293,12 +293,9 @@
             },
             function(e)
             {
-                if(timeoutId)
-                {
-                    window.clearTimeout(timeoutId);
-                    timeoutId=null;
-                    $('canvas').remove();
-                }
+                window.clearTimeout(timeoutId);
+                timeoutId=null;
+                $('canvas').remove();
             });
 
 			function deleteWordDwellFree()
@@ -312,43 +309,12 @@
             {
                 var write = $('#write');
                 var character=value;
-    
-        		// Special characters
-                if(value ==  'Enter')
-                    character = '\n';
-                else if (value == 'Backspace') {
-                    var html = write.html();
-                    write.html(html.substr(0, html.length - 1));
-                        return false;
-                }else if(value == 'Space')
-                {
-                    character = ' ';
-                }else if(value=='Comma')
-                {
-                    character = ',';
-                }else if(value=='Apostrophe')
-                {
-                    character = '\'';
-                }else if(value=='Question')
-                {
-                    character = '?';
-                }else if (value=='Fullstop')
-                {
-                    character = '.';
-                }else if(value=='ExclamationMark')
-                {
-                    character = '!';
-                }else if(value=='')
-                {
-                	var html = write.html();
-                    write.html(html.substr(0, html.length - 1));
-                    return false;
-                }
-    
+
                 if(character.toLowerCase())
                 {
                     write.html(write.html() + character.toLowerCase());
                 }
+                document.getElementById("Speech").className = document.getElementById("Speech").className.replace('hidden','visible');
             }
             //--END: producing text in text area--//
         
@@ -424,8 +390,39 @@
                     	console.log('error deleting db');
                     }
                     
+                    $(".button-space").hover(function(e)
+                    {
+                        var seconds = ms * 0.001;
+                        
+                        $(this).find('.button-pie').pietimer({
+                            seconds: seconds,
+                            color: '#7FC6A4'
+                        });
+                         $(this).children('.button-pie').addClass('button-pie-space');
+                         $(this).find('.button-pie').pietimer('start');
+                         
+                         if(!timeoutId)
+                         {
+                            timeoutId=window.setTimeout(function()
+                            {
+                                simulateKeyboardClicksDwellBased(' ');
+                                timeoutId=null;
+                            }, ms);
+                        }
+                    },
+                    function(e)
+                    {
+                        if(timeoutId)
+                        {
+                            window.clearTimeout(timeoutId);
+                            timeoutId=null;
+                            $('canvas').remove();
+                        }
+                    });
+
                     $(".button").hover(function(e)
                     {
+                        e.currentTarget.style.color = "white";                        
                         closeLetter = calculcateClosestLetter(cursorX,cursorY);
                         console.log(closeLetter);
                         var seconds = ms * 0.001;

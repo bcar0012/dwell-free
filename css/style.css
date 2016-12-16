@@ -188,6 +188,7 @@ td {
     position: fixed;
     bottom: 10px;
     margin-bottom: 1%;
+    cursor:none;
 }
 
 .hide
@@ -447,7 +448,7 @@ td
 	text-align: center;
   height: 28px;
   position: fixed;
-  bottom: 10;
+  bottom: 10px;
   z-index: 9999;
   margin-bottom: 1%;
 	font-family: muli;
