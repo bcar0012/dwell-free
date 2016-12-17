@@ -124,9 +124,12 @@
 
             $('#yes').click(function()
             {
-                var stringLength = $('#write').clone().children().find('.primary').text().trim().length;
+                var inputString = $('#write').clone().children().find('.primary').text().trim();
+                inputString=inputString.replace(/\n/ig, '');
+                var stringLength = inputString.length;
                 var wpm = ((stringLength/5)/(timeOnTask/60)).toFixed(2);
                 document.getElementById('wpm').value = wpm;
+                document.getElementById('inputString').value = inputString
             });
 
             //--START: production of speech--//
@@ -174,24 +177,8 @@
             {
                 document.getElementById("readyConfirmation").className = document.getElementById("readyConfirmation").className.replace('hidden','visible');
             }
-            
-            //--START: producing text in text area on hover text area - dwell-free--//
+                
             var dwellFreeStringBuffer='';
-            function addStringToDwellFreeBuffer(value) //here will be receiving string
-            {
-                if(value == '<i class="fa fa-level-down fa-rotate-90">') //most probabbly - remove
-                {    
-                    value = '\n';
-                }
-                else if (value == '<i class="fa fa-long-arrow-left" aria-hidden="true"></i>') //most probabbly - remove
-                {
-                    var html = $('#write').html();
-                    $('#write').html(html.substr(0, html.length - 1)); //remove entire word not just one letter
-                    return false;
-                }
-                dwellFreeStringBuffer += value;
-            }
-            //--END: producing text in text area--//
             var updateText = null;
             $('#write').hover(function()
             {

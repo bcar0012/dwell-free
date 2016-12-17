@@ -66,6 +66,16 @@
 		        }
 		    }
 		}
+
+        function multiReplace(str, match, repl)
+        {
+            if (match === repl)
+                return str;
+            do {
+                str = str.replace(match, repl);
+            } while(str.indexOf(match) !== -1);
+            return str;
+	    }
 		
 		var accuracy = GetURLParameter('accuracy');
 		document.getElementById('accuracyResult').innerHTML = accuracy + "%";
@@ -78,6 +88,8 @@
         document.getElementById('errorRateResult').innerHTML = errorRate + "%";
         document.getElementById('errorClass').className += " p" + errorRate;
         var keyboardLayout = GetURLParameter('layout');
+        var inputString = GetURLParameter('string');
+        inputString = multiReplace(inputString,'+',' ');
 	</script>
 </body>
 
@@ -135,7 +147,7 @@
         
         function saveTextFile()
         {
-            historyData += "Layout: " + keyboardLayout + "\r\n" + "Accuracy: " + accuracy + "\r\n" + "Error Rate: " + errorRate + "\r\n" + "Words Per Minute: " + wpm + "\r\n" + "Time on Task: " + tot + "\r\n";
+            historyData += "Layout: " + keyboardLayout + "\r\n" + "Input String: " + inputString + "\r\n" + "Accuracy: " + accuracy + "\r\n" + "Error Rate: " + errorRate + "\r\n" + "Words Per Minute: " + wpm + "\r\n" + "Time on Task: " + tot + "\r\n";
             var blob = new Blob([historyData], {
                 type: "text/plain;charset=utf-8;",
             });
