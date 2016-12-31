@@ -147,7 +147,7 @@ var currentString='', keyboard, layout,potentialWords='';
             var deferred = $.Deferred();
             var self=this;
             var list_Dictionary;
-            this.loadWordList = $.get("../assets/wfl5000.txt", function(data)
+            this.loadWordList = $.get("../assets/wordFrequencyDolchWords.txt", function(data)
             {
                 list_Dictionary = data.split("\n");
                 
