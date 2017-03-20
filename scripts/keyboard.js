@@ -12,9 +12,15 @@
             keyboard = data[layout];
         });
         //--END Load keyboard layout--//
-                    
-       loadKeyboard.done(function()
-       {
+
+        if(layout=='newKeyboard')
+        {
+            document.getElementById("separator1").className = document.getElementById("separator1").className.replace('hidden','visible');
+            document.getElementById("separator2").className = document.getElementById("separator2").className.replace('hidden','visible');
+        }
+
+        loadKeyboard.done(function()
+        {
             function loadKeys() 
             {
                 var deferred = $.Deferred();
